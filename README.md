@@ -47,7 +47,7 @@ Please cite SSD in your publications if it helps your research:
 ### Installation
 1. Get the code. We will call the directory that you cloned Caffe into `$CAFFE_ROOT`
   ```Shell
-  git clone https://github.com/weiliu89/caffe.git
+  git clone https://github.com/newwhitecheng/caffe.git
   cd caffe
   git checkout ssd
   ```
@@ -145,7 +145,8 @@ We have provided the latest models that are trained from different datasets. To 
 
 ### Trouble shooting
 1. 
-```Check failed: error == cudaSuccess (10 vs. 0) invalid device ordinal```
+```Check failed: error == cudaSuccess (10 vs. 0) invalid device ordinal
+```
 solution:
 ```
 # check which gpu you wanna use. For example, gpu 0,1
