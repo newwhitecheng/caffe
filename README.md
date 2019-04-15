@@ -145,7 +145,8 @@ We have provided the latest models that are trained from different datasets. To 
 
 ### Trouble shooting
 1. 
-```Check failed: error == cudaSuccess (10 vs. 0) invalid device ordinal
+```
+Check failed: error == cudaSuccess (10 vs. 0) invalid device ordinal
 ```
 solution:
 ```
