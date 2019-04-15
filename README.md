@@ -141,3 +141,30 @@ We have provided the latest models that are trained from different datasets. To 
    * trainval1: [SSD300*](https://drive.google.com/open?id=0BzKzrI_SkD1_a2NKQ2d1d043VXM), [SSD500](https://drive.google.com/open?id=0BzKzrI_SkD1_X2ZCLVgwLTgzaTQ)
 
 <sup>[1]</sup>We use [`examples/convert_model.ipynb`](https://github.com/weiliu89/caffe/blob/ssd/examples/convert_model.ipynb) to extract a VOC model from a pretrained COCO model.
+
+
+### Trouble shooting
+1. 
+```Check failed: error == cudaSuccess (10 vs. 0) invalid device ordinal```
+solution:
+```
+# check which gpu you wanna use. For example, gpu 0,1
+vim examples/ssd/ssd_pascal.py
+gpus = "0,1,2,3" --> gpus = "0,1"
+```
+2. 
+```
+Traceback (most recent call last):
+  File "detector.py", line 29, in <module>
+    import caffe
+  File "/python/caffe/__init__.py", line 1, in <module>
+    from .pycaffe import Net
+  File "/caffe/pycaffe.py", line 6, in <module>
+    from ._caffe import CaffeNet
+ImportError: No module named _caffe
+
+```
+solution:
+```
+make pycaffe
+```
